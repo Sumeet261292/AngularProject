@@ -1,0 +1,27 @@
+<h1> Items </h1>
+
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Location</th>
+        <th>Quantity</th>
+        <th>Buy</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- for (Todo todo: todos) {  -->
+              <tr *ngFor="let item of items">
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.location}}</td>
+                <td>{{item.quantity}}</td>                
+                <td><button (click)="buyItem(todo.name)" class="btn btn-warning">Add to cart</button></td>
+              </tr>
+      <!-- } -->
+    </tbody>
+
+  </table>
